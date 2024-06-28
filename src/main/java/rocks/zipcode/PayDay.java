@@ -41,6 +41,12 @@ public class PayDay {
      *
      *   Notice the data type of each of the four.
      * @return a string of the form "Kris 215.00 10.75 204.25”
+
+     * INPUT PARAMs name, hourlyRate, hoursWorked, deductionRate
+    * grossPay = hourlyRate * hoursWorked
+    * deduction = grossPay * deductionRate
+    * netPay = grossPay – deduction
+    * return name, grossPay, deduction, netPay as String
      */
     public String pay(String n, double rate, double worked, double deduct) {
         return null;
