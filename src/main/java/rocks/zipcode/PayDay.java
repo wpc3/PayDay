@@ -14,6 +14,8 @@ public class PayDay {
         outputReport.append("PayDayReport for this week\n\n");
 
         // create an array of TimeCards that have this weeks data in it.
+
+
         // each timeCard object contains the data for one person.
         TimeCard[] cards = payday.createRunData();
 
@@ -49,7 +51,27 @@ public class PayDay {
     * return name, grossPay, deduction, netPay as String
      */
     public String pay(String n, double rate, double worked, double deduct) {
-        return null;
+
+        //"Kris 215.00 10.75 204.25", string1
+
+        double grossPay, deduction, netpay;
+
+        grossPay = worked * rate;
+        deduction = grossPay * deduct;
+        netpay = grossPay - deduction;
+
+//
+//        String answer;
+//
+//        String formatGP = String.format("%.2f", grossPay);
+//        String formatD = String.format("%.2f", deduction);
+//
+//        answer = n + " " + formatGP + " " + formatD +  " " + netpay;
+
+    return String.format("%s " + "%.2f " + "%.2f " + "%.2f", n , grossPay, deduction, netpay );
+
+
+      //  return answer;
     }
 
 
